@@ -1,0 +1,8 @@
+<resources>
+
+    <string name="app_name">Smart Lava Machine</string>
+    <string name="Blue">Bluetooth</string>
+    <string name="CONECTAR">Conectar</string>
+    <string name="Dispositivos">Dispositivos</string>
+    <string name="Sair">Sair</string>
+</resources>

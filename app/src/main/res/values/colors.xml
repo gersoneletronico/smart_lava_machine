@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#114151</color>
+    <color name="colorPrimaryDark">#114151</color>
+    <color name="colorAccent">#114151</color>
+    <color name="cornivel">@android:color/black</color>
+    <color name="cornivelred">#FF00</color>
+</resources>
