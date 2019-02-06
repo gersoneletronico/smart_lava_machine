@@ -1,6 +1,7 @@
 package com.g_automation.smart_lava_machine;
 
 import android.annotation.SuppressLint;
+import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
@@ -10,6 +11,7 @@ import android.bluetooth.BluetoothSocket;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Handler;
 import android.os.Message;
 import android.support.v7.app.ActionBarActivity;
@@ -96,7 +98,7 @@ public class ActivityControle extends ActionBarActivity {
     int conta1;
     int conta2;
     int conta3;
-    int conta4 = 0;
+    int conta4;
 
 
     @Override
@@ -203,6 +205,7 @@ public class ActivityControle extends ActionBarActivity {
             }
         });
         btnnivel.setOnClickListener(new View.OnClickListener() {
+            @TargetApi(Build.VERSION_CODES.M)
             @Override
             public void onClick(View v) {
                 switch (conta) {
@@ -360,6 +363,7 @@ public class ActivityControle extends ActionBarActivity {
 
         mHandler = new Handler(){
 
+            @TargetApi(Build.VERSION_CODES.M)
             @Override
             public void handleMessage(Message msg) {
 
@@ -633,7 +637,7 @@ public class ActivityControle extends ActionBarActivity {
         protected void onPostExecute(Void result) {
             super.onPostExecute(result);
 
-            if (ConnectSuccess == false) {
+            if (!ConnectSuccess) {
                 conexao = false;
                 //btnluz.setBackgroundResource(R.drawable.bluedesco);
                 Toast.makeText(getApplicationContext(), "Falha na Conexão Tente Novamente", Toast.LENGTH_LONG).show();
@@ -801,6 +805,7 @@ public class ActivityControle extends ActionBarActivity {
         meuBluetoothAdapter.disable();
 
     }
+    @TargetApi(Build.VERSION_CODES.M)
     public void conf_inicial (){
         txtmedio.setTextColor(getColor(R.color.cornivelred));
 //        txtnormal.setTextColor(getColor(R.color.cornivelred));
