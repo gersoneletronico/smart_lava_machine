@@ -96,7 +96,7 @@ public class ActivityControle extends ActionBarActivity {
     int conta1;
     int conta2;
     int conta3;
-    int conta4;
+    int conta4 = 0;
 
 
     @Override
