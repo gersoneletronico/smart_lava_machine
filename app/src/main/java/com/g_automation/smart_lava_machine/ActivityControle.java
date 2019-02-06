@@ -37,9 +37,9 @@ public class ActivityControle extends ActionBarActivity {
 
     //Meus Widget Tipo Botões
     Button btnligar, btnnivel, btniniciarparar, btnagitacao, btnenxague, btncentrifugar, btnavanca;
-    TextView txtalto, txtmedio, txtbaixo, txtextrabaixo, txtmolho, txtlavar, txtenxaguar, txtcentrifugar,
+    TextView txtalto, txtmedio, txtbaixo, txtmolho, txtlavar, txtenxaguar, txtcentrifugar,
             txtturbo, txtnormal, txttripo, txtduplo, txtunico, txtextra, txtnormal1;
-    ImageView lednivelalto, lednivelmedio, lednivelbaixo, lednivelextrabaixo, ledturbo, lednormal, ledtripo, ledduplo, ledunico,
+    ImageView lednivelalto, lednivelmedio, lednivelbaixo, ledturbo, lednormal, ledtripo, ledduplo, ledunico,
             ledextra, lednormalc, ledmolho, ledlavar, ledenxagua, ledcentrifugar;
 
 
@@ -93,10 +93,10 @@ public class ActivityControle extends ActionBarActivity {
 
 
     int conta = 2;
-    int conta1 = 1;
-    int conta2 = 2;
-    int conta3 = 1;
-    int conta4 = 4;
+    int conta1;
+    int conta2;
+    int conta3;
+    int conta4;
 
 
     @Override
@@ -123,7 +123,6 @@ public class ActivityControle extends ActionBarActivity {
 
         }
 
-
 //======================//Referencia os botões da nossa tela procurando pelo ID wadget==============================================================
         btnligar = (Button) findViewById(R.id.btnligar);
         btnnivel = (Button) findViewById(R.id.btnnivel);
@@ -136,7 +135,6 @@ public class ActivityControle extends ActionBarActivity {
         txtalto = (TextView) findViewById(R.id.txtalto);
         txtmedio = (TextView) findViewById(R.id.txtmedio);
         txtbaixo = (TextView) findViewById(R.id.txtbaixo);
-        txtextrabaixo = (TextView) findViewById(R.id.txtextrabaixo);
         txtmolho = (TextView) findViewById(R.id.txtmolho);
         txtlavar = (TextView) findViewById(R.id.txtlavar);
         txtenxaguar = (TextView) findViewById(R.id.txtenxaguar);
@@ -154,7 +152,6 @@ public class ActivityControle extends ActionBarActivity {
         lednivelalto = (ImageView) findViewById(R.id.lednivelalto);
         lednivelmedio = (ImageView) findViewById(R.id.lednivelmedio);
         lednivelbaixo = (ImageView) findViewById(R.id.lednivelbaixo);
-        lednivelextrabaixo = (ImageView) findViewById(R.id.lednivelextrabaixo);
         ledturbo = (ImageView) findViewById(R.id.ledturbo);
         lednormal = (ImageView) findViewById(R.id.lednormal);
         ledtripo = (ImageView) findViewById(R.id.ledtripo);
@@ -214,32 +211,23 @@ public class ActivityControle extends ActionBarActivity {
                         txtalto.setTextColor(getColor(R.color.cornivelred));
                         txtmedio.setTextColor(getColor(R.color.cornivel));
                         txtbaixo.setTextColor(getColor(R.color.cornivel));
-                        txtextrabaixo.setTextColor(getColor(R.color.cornivel));
                         break;
                     case 1:
                         mesagem("N2");
                         txtalto.setTextColor(getColor(R.color.cornivel));
                         txtmedio.setTextColor(getColor(R.color.cornivelred));
                         txtbaixo.setTextColor(getColor(R.color.cornivel));
-                        txtextrabaixo.setTextColor(getColor(R.color.cornivel));
                         break;
                     case 2:
                         mesagem("N3");
                         txtalto.setTextColor(getColor(R.color.cornivel));
                         txtmedio.setTextColor(getColor(R.color.cornivel));
                         txtbaixo.setTextColor(getColor(R.color.cornivelred));
-                        txtextrabaixo.setTextColor(getColor(R.color.cornivel));
-                        break;
-                    case 3:
-                        mesagem("N4");
-                        txtalto.setTextColor(getColor(R.color.cornivel));
-                        txtmedio.setTextColor(getColor(R.color.cornivel));
-                        txtbaixo.setTextColor(getColor(R.color.cornivel));
-                        txtextrabaixo.setTextColor(getColor(R.color.cornivelred));
                         break;
 
+
                 }
-                if (conta != 3){conta = conta + 1;}else{conta = 0;}
+                if (conta != 2){conta = conta + 1;}else{conta = 0;}
                 //Toast.makeText(getApplicationContext(), "N" + conta, Toast.LENGTH_LONG).show();
 
             }
@@ -257,13 +245,13 @@ public class ActivityControle extends ActionBarActivity {
                 switch (conta1) {
                     case 0:
                         mesagem("A1");
-                        txtturbo.setTextColor(getColor(R.color.cornivelred));
-                        txtnormal.setTextColor(getColor(R.color.cornivel));
+//                        txtturbo.setTextColor(getColor(R.color.cornivelred));
+//                        txtnormal.setTextColor(getColor(R.color.cornivel));
                         break;
                     case 1:
                         mesagem("A2");
-                        txtturbo.setTextColor(getColor(R.color.cornivel));
-                        txtnormal.setTextColor(getColor(R.color.cornivelred));
+//                        txtturbo.setTextColor(getColor(R.color.cornivel));
+//                        txtnormal.setTextColor(getColor(R.color.cornivelred));
                         break;
 
                 }
@@ -277,21 +265,21 @@ public class ActivityControle extends ActionBarActivity {
                 switch (conta2) {
                     case 0:
                         mesagem("E1");
-                        txttripo.setTextColor(getColor(R.color.cornivelred));
-                        txtduplo.setTextColor(getColor(R.color.cornivel));
-                        txtunico.setTextColor(getColor(R.color.cornivel));
+//                        txttripo.setTextColor(getColor(R.color.cornivelred));
+//                        txtduplo.setTextColor(getColor(R.color.cornivel));
+//                        txtunico.setTextColor(getColor(R.color.cornivel));
                         break;
                     case 1:
                         mesagem("E2");
-                        txttripo.setTextColor(getColor(R.color.cornivel));
-                        txtduplo.setTextColor(getColor(R.color.cornivelred));
-                        txtunico.setTextColor(getColor(R.color.cornivel));
+//                        txttripo.setTextColor(getColor(R.color.cornivel));
+//                        txtduplo.setTextColor(getColor(R.color.cornivelred));
+//                        txtunico.setTextColor(getColor(R.color.cornivel));
                         break;
                     case 2:
                         mesagem("E3");
-                        txttripo.setTextColor(getColor(R.color.cornivel));
-                        txtduplo.setTextColor(getColor(R.color.cornivel));
-                        txtunico.setTextColor(getColor(R.color.cornivelred));
+//                        txttripo.setTextColor(getColor(R.color.cornivel));
+//                        txtduplo.setTextColor(getColor(R.color.cornivel));
+//                        txtunico.setTextColor(getColor(R.color.cornivelred));
                         break;
 
                 }
@@ -305,13 +293,13 @@ public class ActivityControle extends ActionBarActivity {
                 switch (conta3) {
                     case 0:
                         mesagem("C1");
-                        txtextra.setTextColor(getColor(R.color.cornivelred));
-                        txtnormal1.setTextColor(getColor(R.color.cornivel));
+//                        txtextra.setTextColor(getColor(R.color.cornivelred));
+//                        txtnormal1.setTextColor(getColor(R.color.cornivel));
                         break;
                     case 1:
                         mesagem("C2");
-                        txtextra.setTextColor(getColor(R.color.cornivel));
-                        txtnormal1.setTextColor(getColor(R.color.cornivelred));
+//                        txtextra.setTextColor(getColor(R.color.cornivel));
+//                        txtnormal1.setTextColor(getColor(R.color.cornivelred));
                         break;
 
                 }
@@ -325,43 +313,43 @@ public class ActivityControle extends ActionBarActivity {
             public void onClick(View v) {
                 switch (conta4) {
                     case 0:
-                        mesagem("V1");
-                        txtmolho.setTextColor(getColor(R.color.cornivelred));
-                        txtlavar.setTextColor(getColor(R.color.cornivel));
-                        txtenxaguar.setTextColor(getColor(R.color.cornivel));
-                        txtcentrifugar.setTextColor(getColor(R.color.cornivel));
+                        mesagem("V0");
+//                        txtmolho.setTextColor(getColor(R.color.cornivelred));
+//                        txtlavar.setTextColor(getColor(R.color.cornivel));
+//                        txtenxaguar.setTextColor(getColor(R.color.cornivel));
+//                        txtcentrifugar.setTextColor(getColor(R.color.cornivel));
                         break;
                     case 1:
-                        mesagem("V2");
-                        txtmolho.setTextColor(getColor(R.color.cornivel));
-                        txtlavar.setTextColor(getColor(R.color.cornivelred));
-                        txtenxaguar.setTextColor(getColor(R.color.cornivel));
-                        txtcentrifugar.setTextColor(getColor(R.color.cornivel));
+                        mesagem("V1");
+//                        txtmolho.setTextColor(getColor(R.color.cornivel));
+//                        txtlavar.setTextColor(getColor(R.color.cornivelred));
+//                        txtenxaguar.setTextColor(getColor(R.color.cornivel));
+//                        txtcentrifugar.setTextColor(getColor(R.color.cornivel));
                         break;
                     case 2:
-                        mesagem("V3");
-                        txtmolho.setTextColor(getColor(R.color.cornivel));
-                        txtlavar.setTextColor(getColor(R.color.cornivel));
-                        txtenxaguar.setTextColor(getColor(R.color.cornivelred));
-                        txtcentrifugar.setTextColor(getColor(R.color.cornivel));
+                        mesagem("V2");
+//                        txtmolho.setTextColor(getColor(R.color.cornivel));
+//                        txtlavar.setTextColor(getColor(R.color.cornivel));
+//                        txtenxaguar.setTextColor(getColor(R.color.cornivelred));
+//                        txtcentrifugar.setTextColor(getColor(R.color.cornivel));
                         break;
                     case 3:
-                        mesagem("V4");
-                        txtmolho.setTextColor(getColor(R.color.cornivel));
-                        txtlavar.setTextColor(getColor(R.color.cornivel));
-                        txtenxaguar.setTextColor(getColor(R.color.cornivel));
-                        txtcentrifugar.setTextColor(getColor(R.color.cornivelred));
+                        mesagem("V3");
+//                        txtmolho.setTextColor(getColor(R.color.cornivel));
+//                        txtlavar.setTextColor(getColor(R.color.cornivel));
+//                        txtenxaguar.setTextColor(getColor(R.color.cornivel));
+//                        txtcentrifugar.setTextColor(getColor(R.color.cornivelred));
                         break;
-                    case 4:
-                        mesagem("V4");
-                        txtmolho.setTextColor(getColor(R.color.cornivel));
-                        txtlavar.setTextColor(getColor(R.color.cornivel));
-                        txtenxaguar.setTextColor(getColor(R.color.cornivel));
-                        txtcentrifugar.setTextColor(getColor(R.color.cornivel));
-                        break;
+//                    case 4:
+//                        mesagem("V4");
+////                        txtmolho.setTextColor(getColor(R.color.cornivel));
+////                        txtlavar.setTextColor(getColor(R.color.cornivel));
+////                        txtenxaguar.setTextColor(getColor(R.color.cornivel));
+////                        txtcentrifugar.setTextColor(getColor(R.color.cornivel));
+//                        break;
 
                 }
-                if (conta4 != 4){conta4 = conta4 + 1;}else{conta4 = 0;}
+                if (conta4 != 3){conta4 = conta4 + 1;}else{conta4 = 0;}
                 //Toast.makeText(getApplicationContext(), "N" + conta1, Toast.LENGTH_LONG).show();
 
             }
@@ -392,6 +380,7 @@ public class ActivityControle extends ActionBarActivity {
 
                             String dadosFinais = dadosBluetooth.substring(1, tamInformacao);
 
+
                             if (dadosFinais.contains("PON")) {
                                 btnligar.setBackgroundResource(R.drawable.btn_on);
                             }else if (dadosFinais.contains("POFF")){
@@ -402,91 +391,130 @@ public class ActivityControle extends ActionBarActivity {
                                 lednivelalto.setImageResource(R.drawable.led_on);
                                 lednivelmedio.setImageResource(R.drawable.led_off);
                                 lednivelbaixo.setImageResource(R.drawable.led_off);
-                                lednivelextrabaixo.setImageResource(R.drawable.led_off);
                             }
                             if (dadosFinais.contains("N2")){
                                 lednivelalto.setImageResource(R.drawable.led_off);
                                 lednivelmedio.setImageResource(R.drawable.led_on);
                                 lednivelbaixo.setImageResource(R.drawable.led_off);
-                                lednivelextrabaixo.setImageResource(R.drawable.led_off);
                             }
                             if (dadosFinais.contains("N3")){
                                 lednivelalto.setImageResource(R.drawable.led_off);
                                 lednivelmedio.setImageResource(R.drawable.led_off);
                                 lednivelbaixo.setImageResource(R.drawable.led_on);
-                                lednivelextrabaixo.setImageResource(R.drawable.led_off);
                             }
                             if (dadosFinais.contains("N4")){
                                 lednivelalto.setImageResource(R.drawable.led_off);
                                 lednivelmedio.setImageResource(R.drawable.led_off);
                                 lednivelbaixo.setImageResource(R.drawable.led_off);
-                                lednivelextrabaixo.setImageResource(R.drawable.led_on);
-
                             }
                             //=====================Agitação==========================================
 
                             if (dadosFinais.contains("A1")) {
+                                conta1 = 1;
                                 ledturbo.setImageResource(R.drawable.led_on);
                                 lednormal.setImageResource(R.drawable.led_off);
+                                txtturbo.setTextColor(getColor(R.color.cornivelred));
+                                txtnormal.setTextColor(getColor(R.color.cornivel));
                             }
                             if (dadosFinais.contains("A2")) {
+                                conta1 = 0;
                                 ledturbo.setImageResource(R.drawable.led_off);
                                 lednormal.setImageResource(R.drawable.led_on);
+                                txtturbo.setTextColor(getColor(R.color.cornivel));
+                                txtnormal.setTextColor(getColor(R.color.cornivelred));
                             }
                             //===============================================================
                             //=====================Enxague==========================================
 
                             if (dadosFinais.contains("E1")) {
+                                conta2 = 1;
                                 ledtripo.setImageResource(R.drawable.led_on);
                                 ledduplo.setImageResource(R.drawable.led_off);
                                 ledunico.setImageResource(R.drawable.led_off);
+                                txttripo.setTextColor(getColor(R.color.cornivelred));
+                                txtduplo.setTextColor(getColor(R.color.cornivel));
+                                txtunico.setTextColor(getColor(R.color.cornivel));
                             }
                             if (dadosFinais.contains("E2")) {
+                                conta2 = 2;
                                 ledtripo.setImageResource(R.drawable.led_off);
                                 ledduplo.setImageResource(R.drawable.led_on);
                                 ledunico.setImageResource(R.drawable.led_off);
+                                txttripo.setTextColor(getColor(R.color.cornivel));
+                                txtduplo.setTextColor(getColor(R.color.cornivelred));
+                                txtunico.setTextColor(getColor(R.color.cornivel));
                             }
                             if (dadosFinais.contains("E3")) {
+                                conta2 = 0;
                                 ledtripo.setImageResource(R.drawable.led_off);
                                 ledduplo.setImageResource(R.drawable.led_off);
                                 ledunico.setImageResource(R.drawable.led_on);
+                                txttripo.setTextColor(getColor(R.color.cornivel));
+                                txtduplo.setTextColor(getColor(R.color.cornivel));
+                                txtunico.setTextColor(getColor(R.color.cornivelred));
                             }
                             //===============================================================
                             //========================centrifugação=======================================
 
                             if (dadosFinais.contains("C1")) {
+                                conta3 = 1;
                                 ledextra.setImageResource(R.drawable.led_on);
                                 lednormalc.setImageResource(R.drawable.led_off);
+                                txtextra.setTextColor(getColor(R.color.cornivelred));
+                                txtnormal1.setTextColor(getColor(R.color.cornivel));
                             }
                             if (dadosFinais.contains("C2")) {
+                                conta3 = 0;
                                 ledextra.setImageResource(R.drawable.led_off);
                                 lednormalc.setImageResource(R.drawable.led_on);
+                                txtextra.setTextColor(getColor(R.color.cornivel));
+                                txtnormal1.setTextColor(getColor(R.color.cornivelred));
                             }
                             //===============================================================
 
-                            if (dadosFinais.contains("V1")) {
+                            if (dadosFinais.contains("V0")) {
+                                conta4 = 1;
                                 ledmolho.setImageResource(R.drawable.led_on);
                                 ledlavar.setImageResource(R.drawable.led_off);
                                 ledenxagua.setImageResource(R.drawable.led_off);
                                 ledcentrifugar.setImageResource(R.drawable.led_off);
+                                txtmolho.setTextColor(getColor(R.color.cornivelred));
+                                txtlavar.setTextColor(getColor(R.color.cornivel));
+                                txtenxaguar.setTextColor(getColor(R.color.cornivel));
+                                txtcentrifugar.setTextColor(getColor(R.color.cornivel));
                             }
-                            if (dadosFinais.contains("V2")) {
+                            if (dadosFinais.contains("V1")) {
+                                conta4 = 2;
                                 ledmolho.setImageResource(R.drawable.led_off);
                                 ledlavar.setImageResource(R.drawable.led_on);
                                 ledenxagua.setImageResource(R.drawable.led_off);
                                 ledcentrifugar.setImageResource(R.drawable.led_off);
+                                txtmolho.setTextColor(getColor(R.color.cornivel));
+                                txtlavar.setTextColor(getColor(R.color.cornivelred));
+                                txtenxaguar.setTextColor(getColor(R.color.cornivel));
+                                txtcentrifugar.setTextColor(getColor(R.color.cornivel));
                             }
-                            if (dadosFinais.contains("V3")) {
+                            if (dadosFinais.contains("V2")) {
+                                conta4 = 3;
                                 ledmolho.setImageResource(R.drawable.led_off);
                                 ledlavar.setImageResource(R.drawable.led_off);
                                 ledenxagua.setImageResource(R.drawable.led_on);
                                 ledcentrifugar.setImageResource(R.drawable.led_off);
+                                txtmolho.setTextColor(getColor(R.color.cornivel));
+                                txtlavar.setTextColor(getColor(R.color.cornivel));
+                                txtenxaguar.setTextColor(getColor(R.color.cornivelred));
+                                txtcentrifugar.setTextColor(getColor(R.color.cornivel));
                             }
-                            if (dadosFinais.contains("V4")) {
+                            if (dadosFinais.contains("V3")) {
+                                conta4 = 0;
                                 ledmolho.setImageResource(R.drawable.led_off);
                                 ledlavar.setImageResource(R.drawable.led_off);
                                 ledenxagua.setImageResource(R.drawable.led_off);
                                 ledcentrifugar.setImageResource(R.drawable.led_on);
+                                txtmolho.setTextColor(getColor(R.color.cornivel));
+                                txtlavar.setTextColor(getColor(R.color.cornivel));
+                                txtenxaguar.setTextColor(getColor(R.color.cornivel));
+                                txtcentrifugar.setTextColor(getColor(R.color.cornivelred));
                             }
 
 
@@ -615,7 +643,7 @@ public class ActivityControle extends ActionBarActivity {
                 //btnluz.setBackgroundResource(R.drawable.blueconect);
                 Toast.makeText(getApplicationContext(), "Conectado ;-)", Toast.LENGTH_LONG).show();
                 getSupportActionBar().setSubtitle("          Conectado");
-                handler.postDelayed(atualizaStatus, 2000);
+                //handler.postDelayed(atualizaStatus, 5000);
 
             }
             progress.dismiss();
@@ -640,36 +668,36 @@ public class ActivityControle extends ActionBarActivity {
         }
     }
 
-    //============Método que atualiza status da tela======================
-    private Runnable atualizaStatus = new Runnable() {
-        @Override
-        public void run() {
-
-            //Toast.makeText(getApplicationContext(), "Solicitando", Toast.LENGTH_LONG).show();
-            //mesagem 'w');
-            handler.postDelayed(this, 2000);
-
-        }
-    };
+//    //============Método que atualiza status da tela======================
+//    private Runnable atualizaStatus = new Runnable() {
+//        @Override
+//        public void run() {
+//
+//            Toast.makeText(getApplicationContext(), "Solicitando", Toast.LENGTH_SHORT).show();
+//            //mesagem 'w');
+//            handler.postDelayed(this, 5000);
+//
+//        }
+//    };
 
 
     //====================Metodo para enviar mensagens via bluetooth================================
     public void mesagem(String mensagem) {
         if (btSocket != null) {
             try {
-                btSocket.getOutputStream().write(mensagem.toString().getBytes());
+                btSocket.getOutputStream().write( mensagem.getBytes());
             } catch (IOException e) { // msg("Error");
             }
         }
     }
 
     //========Metodo para receber dados=============================================================
-    private class ConnectedThread extends Thread {
+    public class ConnectedThread extends Thread {
 
         private final InputStream mmInStream;
         private final OutputStream mmOutStream;
 
-        public ConnectedThread(BluetoothSocket socket) {
+        private ConnectedThread(BluetoothSocket socket) {
 
             InputStream tmpIn = null;
             OutputStream tmpOut = null;
@@ -685,26 +713,28 @@ public class ActivityControle extends ActionBarActivity {
             mmOutStream = tmpOut;
         }
 
-        public void run() {
-            byte[] buffer = new byte[1024];  // buffer store for the stream
-            int bytes; // bytes returned from read()
+            public void run() {
+                byte[] buffer = new byte[1024];  // buffer store for the stream
+                int bytes; // bytes returned from read()
 
-            // Keep listening to the InputStream until an exception occurs
-            while (true) {
-                try {
-                    // Read from the InputStream
-                    bytes = mmInStream.read(buffer);
+                // Keep listening to the InputStream until an exception occurs
+                while (true) {
+                    try {
+                        // Read from the InputStream
+                        bytes = mmInStream.read( buffer );
 
-                    String dadosBt = new String(buffer, 0, bytes );
+                        String dadosBt = new String( buffer, 0, bytes );
 
-                    // Send the obtained bytes to the UI activity
-                    mHandler.obtainMessage(MESSAGE_READ, bytes, -1, dadosBt)
-                            .sendToTarget();
-                } catch (IOException e) {
-                    break;
+                        // Send the obtained bytes to the UI activity
+                        mHandler.obtainMessage( MESSAGE_READ, bytes, -1, dadosBt )
+                                .sendToTarget();
+                    } catch (IOException e) {
+                        break;
+                    }
                 }
+                //handler.postDelayed( this, 5000 );
             }
-        }
+
     }
     //===========================================fim================================================
     //=======Dialogo que pergunta si tem certeza que quer desconectar===============================
@@ -729,38 +759,40 @@ public class ActivityControle extends ActionBarActivity {
     @Override
     protected void onStop() {
         super.onStop();
-        //Toast.makeText(getApplicationContext(), "Stop ", Toast.LENGTH_LONG).show();
+        //Toast.makeText(getApplicationContext(), "onStop ", Toast.LENGTH_SHORT).show();
     }
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
-        //Toast.makeText(getApplicationContext(), "Bluetooth ", Toast.LENGTH_LONG).show();
+        //Toast.makeText(getApplicationContext(), "onTouchEvent ", Toast.LENGTH_SHORT).show();
                 return super.onTouchEvent(event);
     }
 
     @Override
     protected void onStart() {
         super.onStart();
-
+        //Toast.makeText(getApplicationContext(), "onStart ", Toast.LENGTH_SHORT).show();
+        conf_inicial ();
 
     }
 
     @Override
     protected void onPause() {
         super.onPause();
+        //Toast.makeText(getApplicationContext(), "onPause ", Toast.LENGTH_SHORT).show();
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        mesagem("");
+        //Toast.makeText(getApplicationContext(), "onResume ", Toast.LENGTH_SHORT).show();
 
     }
 
     @Override
     protected void onRestart() {
         super.onRestart();
-        //Toast.makeText(getApplicationContext(), "Restart ", Toast.LENGTH_LONG).show();
+        //Toast.makeText(getApplicationContext(), "Restart ", Toast.LENGTH_SHORT).show();
     }
 
     @Override
@@ -768,6 +800,13 @@ public class ActivityControle extends ActionBarActivity {
         super.onDestroy();
         meuBluetoothAdapter.disable();
 
+    }
+    public void conf_inicial (){
+        txtmedio.setTextColor(getColor(R.color.cornivelred));
+//        txtnormal.setTextColor(getColor(R.color.cornivelred));
+//        txtunico.setTextColor(getColor(R.color.cornivelred));
+//        txtnormal1.setTextColor(getColor(R.color.cornivelred));
+//        txtlavar.setTextColor(getColor(R.color.cornivelred));
     }
 
 }
