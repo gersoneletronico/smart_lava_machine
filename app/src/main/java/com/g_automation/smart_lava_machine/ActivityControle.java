@@ -95,7 +95,7 @@ public class ActivityControle extends ActionBarActivity {
 
 
     int conta = 2;
-    int conta1;
+    int conta1 = 0;
     int conta2;
     int conta3;
     int conta4;
