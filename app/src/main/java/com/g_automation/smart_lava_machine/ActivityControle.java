@@ -95,12 +95,13 @@ public class ActivityControle extends ActionBarActivity {
 
 
     int conta = 2;
-    int conta1 = 0;
+    int conta1;
     int conta2;
     int conta3;
     int conta4;
 
 
+    @SuppressLint("HandlerLeak")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -367,6 +368,8 @@ public class ActivityControle extends ActionBarActivity {
             @Override
             public void handleMessage(Message msg) {
 
+                //Toast.makeText(getApplicationContext(), "testando ", Toast.LENGTH_SHORT).show();
+
                 if(msg.what == MESSAGE_READ){
                     String recebidos = (String) msg.obj;
 
@@ -396,21 +399,37 @@ public class ActivityControle extends ActionBarActivity {
                                 lednivelmedio.setImageResource(R.drawable.led_off);
                                 lednivelbaixo.setImageResource(R.drawable.led_off);
                             }
+                            if (dadosFinais.contains("M1")) { conta = 1;
+                               txtalto.setTextColor(getColor(R.color.cornivelred));
+                               txtmedio.setTextColor(getColor(R.color.cornivel));
+                               txtbaixo.setTextColor(getColor(R.color.cornivel));
+                            }
                             if (dadosFinais.contains("N2")){
                                 lednivelalto.setImageResource(R.drawable.led_off);
                                 lednivelmedio.setImageResource(R.drawable.led_on);
                                 lednivelbaixo.setImageResource(R.drawable.led_off);
+                            }
+                            if (dadosFinais.contains("M2")) {  conta = 2;
+                                txtalto.setTextColor(getColor(R.color.cornivel));
+                                txtmedio.setTextColor(getColor(R.color.cornivelred));
+                                txtbaixo.setTextColor(getColor(R.color.cornivel));
                             }
                             if (dadosFinais.contains("N3")){
                                 lednivelalto.setImageResource(R.drawable.led_off);
                                 lednivelmedio.setImageResource(R.drawable.led_off);
                                 lednivelbaixo.setImageResource(R.drawable.led_on);
                             }
+                            if (dadosFinais.contains("M3")) {  conta = 0;
+                                txtalto.setTextColor(getColor(R.color.cornivel));
+                                txtmedio.setTextColor(getColor(R.color.cornivel));
+                                txtbaixo.setTextColor(getColor(R.color.cornivelred));
+                            }
                             if (dadosFinais.contains("N4")){
                                 lednivelalto.setImageResource(R.drawable.led_off);
                                 lednivelmedio.setImageResource(R.drawable.led_off);
                                 lednivelbaixo.setImageResource(R.drawable.led_off);
                             }
+
                             //=====================Agitação==========================================
 
                             if (dadosFinais.contains("A1")) {
@@ -524,7 +543,7 @@ public class ActivityControle extends ActionBarActivity {
 
 
 
-                            Log.d("dadosRecebidos", dadosFinais);
+                            Log.d("###########dadosRecebidos#############", dadosFinais);
                         }
                         dadosBluetooth.delete(0, dadosBluetooth.length());
 
@@ -647,7 +666,7 @@ public class ActivityControle extends ActionBarActivity {
                 //btnluz.setBackgroundResource(R.drawable.blueconect);
                 Toast.makeText(getApplicationContext(), "Conectado ;-)", Toast.LENGTH_LONG).show();
                 getSupportActionBar().setSubtitle("          Conectado");
-                //handler.postDelayed(atualizaStatus, 5000);
+                handler.postDelayed(atualizaStatus, 5000);
 
             }
             progress.dismiss();
@@ -790,7 +809,7 @@ public class ActivityControle extends ActionBarActivity {
     protected void onResume() {
         super.onResume();
         //Toast.makeText(getApplicationContext(), "onResume ", Toast.LENGTH_SHORT).show();
-
+        //handler.postDelayed(atualizaStatus, 0);
     }
 
     @Override
@@ -813,5 +832,14 @@ public class ActivityControle extends ActionBarActivity {
 //        txtnormal1.setTextColor(getColor(R.color.cornivelred));
 //        txtlavar.setTextColor(getColor(R.color.cornivelred));
     }
+    //============Método que atualiza status da tela======================
+    private Runnable atualizaStatus = new Runnable() {
+        @Override
+        public void run() {
+            handler.postDelayed(this, 3000 );
+            mesagem("*");
+
+        }
+    };
 
 }
